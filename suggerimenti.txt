@@ -1,0 +1,36 @@
+
+String result = "GRAFO CREATO!\n" + "#VERTICI: " + this.grafo.vertexSet().size() + "\n" + "#ARCHI: " + this.grafo.edgeSet().size()+"\n";
+
+
+
+	
+	public boolean isCreato() {
+		if(this.grafo == null)
+			return false;
+		else
+			return true;
+	}
+
+
+• outDegreeOf: restituisce il numero di archi uscenti da un determinato vertice;
+• inDegreeOf: restituisce il numero di archi entranti in un determinato vertice;
+• outgoingEdgesOf: restituisce il set di archi uscenti da un determinato vertice;
+• incomingEdgesOf: restituisce il set di archi entranti in un determinato vertice;
+• Graphs.successorListOf: restituisce la lista di vertici raggiunti dagli outgoingEdges;
+• Graphs.predecessorListOf: restituisce la lista di vertici raggiunti dagli incomingEdges.
+
+
+//uso della lat lon
+result.add(new Arco(res.getString("c1"), res.getString("c2"), LatLngTool.distance(new LatLng(res.getDouble("lat1"), res.getDouble("lon1")), new LatLng(res.getDouble("lat2"), res.getDouble("lon2")), LengthUnit.KILOMETER) ));
+
+
+//TABEL VIEW
+
+clQuartiere.setCellValueFactory(new PropertyValueFactory<QuartieriDistanza, String>("c"));
+clDistanza.setCellValueFactory(new PropertyValueFactory<QuartieriDistanza, Double>("distanza"));
+
+private TableView<QuartieriDistanza> tblQuartieri;
+private TableColumn<QuartieriDistanza, String> clQuartiere;			
+private TableColumn<QuartieriDistanza, Double> clDistanza;
+
+tblQuartieri.setItems(FXCollections.observableArrayList(qd));
