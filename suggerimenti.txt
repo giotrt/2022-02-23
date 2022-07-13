@@ -34,3 +34,15 @@ private TableColumn<QuartieriDistanza, String> clQuartiere;
 private TableColumn<QuartieriDistanza, Double> clDistanza;
 
 tblQuartieri.setItems(FXCollections.observableArrayList(qd));
+
+
+TOKEN:
+
+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
+
+PSW:
+
+7PSLLHZf82cf7AP
+
+USN:
+giotrt
